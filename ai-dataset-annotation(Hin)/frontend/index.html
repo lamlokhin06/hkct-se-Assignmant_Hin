@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Dataset Annotator</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AI Dataset Annotation Tool</h1>
+
+    <!-- 1. Image Upload Section -->
+    <section class="upload-section">
+      <h2>Upload Image</h2>
+      <input type="file" id="imageUpload" accept="image/jpeg,image/png,image/jpg">
+      <button id="uploadBtn">Upload</button>
+      <p id="uploadStatus" class="status"></p>
+    </section>
+
+    <!-- 2. Label Addition Section -->
+    <section class="label-section">
+      <h2>Add Label to Image</h2>
+      <select id="imageSelect">
+        <option value="">Select an uploaded image</option>
+      </select>
+      <input type="text" id="labelInput" placeholder="Enter label (max 50 chars)" maxlength="50">
+      <button id="addLabelBtn">Add Label</button>
+      <p id="labelStatus" class="status"></p>
+    </section>
+
+    <!-- 3. View Labeled Images -->
+    <section class="images-section">
+      <h2>Labeled Images</h2>
+      <div id="imagesGrid"></div>
+    </section>
+  </div>
+
+    <section class="container mb-4">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h2>Purpose</h2>
+                <p>Simplify the creation of high-quality labeled datasets so teams can focus on model experimentation instead of tedious manual tooling. The tool offers a streamlined interface for intuitive dataset management.</p>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <h2>Audience</h2>
+                <p>Designed for instructors, student annotators, and researchers who need a lightweight, web-based tool for quick dataset labeling in real-time.</p>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <h2>Workflow</h2>
+                <ol>
+                    <li><strong>Upload</strong>: Users upload images or data files.</li>
+                    <li><strong>Labeling</strong>: Apply descriptive labels to each image.</li>
+                    <li><strong>Review</strong>: Visualize the labeled dataset for accuracy.</li>
+                    <li><strong>Export</strong>: Download the labeled dataset in CSV format for further analysis.</li>
+                </ol>
+                <p><em>Best practice</em>: Regularly update the labels and track progress.</p>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <h2>Features</h2>
+                <ul>
+                    <li><strong>Upload Images</strong>: Easily drag and drop images into the interface.</li>
+                    <li><strong>Label Images</strong>: Use a straightforward input field to add labels.</li>
+                    <li><strong>Display Gallery</strong>: View uploaded images along with their corresponding labels.</li>
+                    <li><strong>Export Functionality</strong>: Download labeled data as a CSV for model training.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <h2>Technical Requirements</h2>
+                <p><strong>Browsers</strong>: Compatible with Chrome, Firefox, and Safari.</p>
+                <p><strong>Setup</strong>: Run the application locally or deploy on a server.</p>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <h2>FAQ</h2>
+                <p><strong>What image formats are supported?</strong> JPG, PNG, and GIF.</p>
+                <p><strong>Is there a file size limit?</strong> Yes, each file should not exceed 5MB.</p>
+            </div>
+        </div>
+    </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
